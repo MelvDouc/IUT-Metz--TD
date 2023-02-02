@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../sakura.css" type="text/css" />
+    <link rel="stylesheet" href="../../sakura.css" type="text/css" />
     <link rel="stylesheet" href="./ex04.css" type="text/css" />
+    <script src="./ex04.js" defer></script>
     <title>Ex04</title>
   </head>
   <body>
@@ -14,23 +15,25 @@
     <blockquote>
       > Ci-dessous vous trouverez un tableau vide. Votre but dans un premier
       temps sera de créer une carte BINGO aléatoire à l'intérieur. En pratique,
-      vous devrez remplir chacunes des cases avec un chiffre aléatoire entre 1
+      vous devrez remplir chacune des cases avec un chiffre aléatoire entre 1
       et 90. (Règles du jeu ici au cas où :
       <a href="https://www.regles-de-jeux.com/regle-du-bingo/" target="_blank"
         >https://www.regles-de-jeux.com/regle-du-bingo/</a
-      >)
+      >).
     </blockquote>
     <blockquote>
       > Rajoutez un bouton pour jouer un chiffre aléatoire entre 1 et 90. Si le
       chiffre généré est dans la grille bingo, changez la case pour l'indiquer
-      "active" comme la cellulle "Free". Pensez aussi à créer un bouton "Reset"
+      "active" comme la cellule "Free". Pensez aussi à créer un bouton "Reset".
     </blockquote>
     <blockquote>
       > Créez une condition de victoire. Le jeu est gagné si une ligne, colonne,
-      ou diagonale, est entièrement remplie
+      ou diagonale, est entièrement remplie.
     </blockquote>
+
     <hr />
-    <table>
+
+    <table id="bingo-table">
       <thead>
         <tr>
           <th>B</th>
@@ -78,6 +81,10 @@
         </tr>
       </tbody>
     </table>
-    <p><button>Generate Bingo Card</button></p>
+    <p><button id="generate-btn">Generate Bingo Card / Reset</button></p>
+     <p>
+      <button id="play-number">Play number</button>
+      <span id="roller-result"></span>
+    </p>
   </body>
 </html>

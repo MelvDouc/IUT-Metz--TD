@@ -1,9 +1,10 @@
 {
-  "html.format.wrapAttributes": "force-aligned",
-  "html.format.wrapLineLength": 0,
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
+  "cSpell.language": "en,fr",
+  "html.format.wrapAttributes": "force-aligned",
+  "html.format.wrapLineLength": 0,
   "liveServer.settings.port": 5501
 }
