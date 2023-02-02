@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sakura.css" type="text/css" />
-    <link rel="stylesheet" href="ex05.css" type="text/css" />
+    <link rel="stylesheet" href="./ex05.css" type="text/css" />
+    <script src="./ex05.js" defer></script>
     <title>Ex05</title>
   </head>
   <body>
@@ -14,7 +14,7 @@
       Cette fois, nous allons réaliser un jeu de morpion. Typiquement, le jeu du
       morpion se fait sur une grille de 3x3, mais dans cet exercice, nous allons
       laisser le choix de la taille de la grille à l'utilisateur, donc nous ne
-      pouvons pas partir d'une base en HTML. Tout sera créé dynamiquement!
+      pouvons pas partir d'une base en HTML. Tout sera créé dynamiquement !
     </p>
     <blockquote>
       > Réalisez un jeu de morpion fonctionnel sur cette page sur une grille de
@@ -31,6 +31,11 @@
       ne devrait pas être trop compliquée :)
     </blockquote>
     <hr />
-    <i>-- Créez votre jeu ici --</i>
+
+    <section class="game">
+      <table id="tic-tac-toe-grid"></table>
+      <button id="new-game-btn">New Game</button>
+    </section>
+
   </body>
 </html>

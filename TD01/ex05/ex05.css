@@ -1,1 +1,33 @@
-/* C'est pas impossible qu'il y ait un peu de CSS à rajouter ici... */
+:root {
+  --border: 1px solid black;
+  --cell-size: 100px;
+}
+
+#tic-tac-toe-grid {
+  margin-top: 2em;
+  border-collapse: collapse;
+}
+
+#tic-tac-toe-grid tr+tr td {
+  border-top: var(--border);
+}
+
+#tic-tac-toe-grid td+td {
+  border-left: var(--border);
+}
+
+#tic-tac-toe-grid td {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  line-height: var(--cell-size);
+  text-align: center;
+  user-select: none;
+}
+
+.win {
+  background-color: lightgreen;
+}
+
+.draw {
+  background-color: lightgray;
+}

@@ -42,7 +42,7 @@ const freeCell = document.querySelector("#cell-free");
 const rollerResult = document.querySelector("#roller-result");
 const generateBtn = document.querySelector("#generate-btn");
 const playNumberBtn = document.querySelector("#play-number");
-const numbers = [];
+let numbers = [];
 
 // ===== ===== ===== ===== =====
 // INIT
@@ -65,7 +65,7 @@ function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function setRandomNumbers() {
+function getRandomNumbers() {
   const numberSet = new Set();
 
   while (numberSet.size < 24) {
@@ -73,12 +73,11 @@ function setRandomNumbers() {
     numberSet.add(randomNumber);
   }
 
-  numbers.length = 0;
-  numbers.push(...numberSet);
+  return [...numberSet];
 }
 
 function initBingoTable() {
-  setRandomNumbers();
+  numbers = getRandomNumbers();
 
   for (const row of rows) {
     for (const cell of row) {
